@@ -1,3 +1,17 @@
+```
+
+  ____  ____   _____ ____  ____   _        ___         __   ___   ____   _____  ____   ____ 
+ /    ||    \ / ___/|    ||    \ | |      /  _]       /  ] /   \ |    \ |     ||    | /    |
+|  o  ||  _  (   \_  |  | |  o  )| |     /  [_       /  / |     ||  _  ||   __| |  | |   __|
+|     ||  |  |\__  | |  | |     || |___ |    _]     /  /  |  O  ||  |  ||  |_   |  | |  |  |
+|  _  ||  |  |/  \ | |  | |  O  ||     ||   [_     /   \_ |     ||  |  ||   _]  |  | |  |_ |
+|  |  ||  |  |\    | |  | |     ||     ||     |    \     ||     ||  |  ||  |    |  | |     |
+|__|__||__|__| \___||____||_____||_____||_____|     \____| \___/ |__|__||__|   |____||___,_|
+                                                                                            
+
+
+```
+
 You can create and edit two files in each of your ansible project directorys that configures the behavour of ansible and the ansible-navigator command. an ansible project directory is directory from which you runs your playbooks by using the ansible, ansible-playbook and ansible-navigator commands.
 
 The file you can create or edit are:
