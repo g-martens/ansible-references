@@ -17,10 +17,11 @@ You can use this Repository as an reference Guide to learn about different topic
 You can find the folling topics:
 1. config
 2. playbooks
-2. vars
-3. loops
-4. handlers
-5. blocks
-6. error handling
-7. commands
+3. roles
+4. vars
+5. loops
+6. handlers
+7. blocks
+8. error handling
+9. commands
 
