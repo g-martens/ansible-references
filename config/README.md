@@ -79,5 +79,3 @@ ansible-navigator:
   mode: stdout
 ...
 ```
-## Tips to create an config file
-U can use the folling command to dump all the config settings that are available.
