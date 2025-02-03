@@ -15,14 +15,14 @@
 You can use this Repository as an reference Guide to learn about different topics of ansible.
 
 You can find the folling topics:
-01. config
-02. playbooks
-03. roles
-04. vars
-05. secrets
-06. loops
-07. handlers
-08. blocks
-09. error handling
-10. commands
+01. [config](01.%20config/README.md)
+02. [playbooks](02.%20playbooks/README.md)
+03. [roles](03.%20roles/README.md)
+04. [vars](04.%20vars/README.md)
+05. [secrets](05.%20secrets/README.md)
+06. [loops](06.%20loops/README.md)
+07. [handlers](07.%20handlers/README.md)
+08. [blocks](08.%20blocks/README.md)
+09. [error handling](09.%20error%20handling/README.md)
+10. [commands](10.%20conditional/README.md)
 
