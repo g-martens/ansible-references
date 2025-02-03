@@ -91,6 +91,7 @@ With the ansible-navigator you have subcommands.
 8. run (ansible-playbook)
 
 ## Images
+To verfy which images you have installed, you can use
 ```bash
 [user@server]$ ansible-navigator images
 ```
