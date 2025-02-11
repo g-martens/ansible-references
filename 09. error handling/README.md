@@ -55,7 +55,7 @@ See the following snippet for an example:
 ```
 
 # Force handlers to run now instead of after the play
-Normaly any handlers are executed after finishing a play. But when you want to run a handler at a certain point, you can use the meta: flush_handlers
+Normaly any handlers are executed after finishing all task. But when you want to run a handler at a certain point, you can use the meta: flush_handlers
 
 ```YAML
 - name: Force any notified handlers to execute now
