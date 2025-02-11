@@ -83,6 +83,9 @@ The precendence order is from top to bottom.
 ```yaml
 ---
 ansible-navigator:
+  ansible:
+    config:
+      path: ~/.ansible.cfg
   execution-environment:
     image: utility.lab.example.com/ee-supported-rhel8:latest
     pull: registry
