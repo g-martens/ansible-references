@@ -48,6 +48,23 @@ roles/
 ```
 This structure helps in maintaining clean and modular code, making it easier to manage complex configurations.
 
+# Create an role
+You can create an role with the following command
+```bash
+ansible-galaxy init <rolename>
+```
+
+## Naming convention
+when you create a name, the common naming convention is:
+```
+<publisher>.<name of the role>
+```
+
+for example:
+```
+g-martens.postgres
+```
+
 # Defining Variables and Defaults
 Role variables are defined by creating a vars/main.yml file with key-value pairs in the role directory hierarchy. These variables are referenced in role task files like any other variable: {{ VAR_NAME }}. These variables have a high precedence and can not be overridden by inventory variables. These variables are used by the internal functioning of the role.
 
