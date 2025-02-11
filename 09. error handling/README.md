@@ -54,6 +54,14 @@ See the following snippet for an example:
         state: restarted
 ```
 
+# Force handlers to run now instead of after the play
+Normaly any handlers are executed after finishing a play. But when you want to run a handler at a certain point, you can use the meta: flush_handlers
+
+```YAML
+- name: Force any notified handlers to execute now
+  ansible.buildin.meta: flush_handlers
+```
+
 >[!WARNING]
 >Remember that handlers are notified when a task reports a changed result but are not notified when it reports an ok or failed result.
 >
