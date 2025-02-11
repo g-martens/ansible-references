@@ -51,8 +51,6 @@ In the preceding example, the playbook is attempting to connect to the host mach
 
 
 ## Problems with Privilege Escalation
-
-## Problems with Name or Address Resolution
 If your playbook connects as a remote_user and then uses privilege escalation to become the root user (or some other user), make sure that become is set properly, and that you are using the correct value for the become_user directive. The setting for become_user is root by default.
 
 If the remote user needs to provide a sudo password, you should confirm that you are providing the correct sudo password, and that sudo on the managed host is configured correctly.
@@ -71,6 +69,15 @@ In the preceding example, the playbook is attempting to run sudo on the host mac
 
 >[!WARNING]
 >Normally, ansible-navigator runs as root inside its automation execution environment. However, the root user in the container has access to SSH keys provided by the user that ran ansible-navigator on the workstation. This can be slightly confusing when you are trying to debug remote_user and become directives, especially if you are used to the earlier ansible-playbook command that runs as the user on the workstation.
+
+## Problems with Name or Address Resolution
+A more subtle problem has to do with inventory settings. For a complex server with multiple network addresses, you might need to use a particular address or DNS name when connecting to that system. You might not want to use that address as the machine's inventory name for better readability. You can set a host inventory variable, ansible_host, that overrides the inventory name with a different name or IP address and be used by Ansible to connect to that host. This variable could be set in the host_vars file or directory for that host, or could be set in the inventory file itself.
+
+For example, the following inventory entry configures Ansible to connect to 192.0.2.4 when processing the web4.phx.example.com host:
+```bash
+web4.phx.example.com ansible_host=192.0.2.4
+```
+This is a useful way to control how Ansible connects to managed hosts. However, it can also cause problems if the value of ansible_host is incorrect.
 
 ## Python on Managed Hosts
 For normal operation, Ansible requires a Python interpreter to be installed on managed hosts running Linux. Ansible attempts to locate a Python interpreter on each Linux managed host the first time a module is run on that host.
