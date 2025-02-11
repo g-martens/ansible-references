@@ -213,6 +213,6 @@ ansible-galaxy role install -r roles/requirements.yml -p ~/ansible/roles
 ```
 
 >[!WARNING]
->If you don't specify the -p, the roles_path from your ansible.cfg is being used.\
+>If you don't specify the -p, the roles_path from your ansible.cfg is being used.
 
 You can find the community-managed roles on the [Ansible Galaxy](https://galaxy.ansible.com/)

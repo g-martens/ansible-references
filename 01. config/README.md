@@ -37,6 +37,9 @@ The precendence order is from top to bottom.
 inventory = ./inventory
 remote_user = ansible
 ask_pass = false
+log_path = ~/ansible-playbook.log
+roles_path = ~/ansible/roles
+collections_path= ~/ansible/collections
 
 [privilege_escelation]
 become = true
