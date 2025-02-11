@@ -37,7 +37,7 @@ After the tasks in the block clause run, as well as the tasks in the rescue clau
 To summarize:
 - **block**: Defines the main tasks to run.
 - **rescue**: Defines the tasks to run if the tasks defined in the block clause fail.
-- **always**: Defines the tasks that always run independently of the success or failure of tasksdefined in the block and rescue clauses.
+- **always**: Defines the tasks that always run independently of the success or failure of tasks defined in the block and rescue clauses.
 
 The following example shows how to implement a block in a playbook.
 ```YAML
