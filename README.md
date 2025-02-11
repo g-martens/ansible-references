@@ -28,4 +28,5 @@ You can find the folling topics:
 11. [commands](11.%20commands/README.md)
 12. [Modules](12.%20Modules/README.md)
 13. [Jinja Templates](13.%20Jinja%20Templates/README.md)
+14. [collections](14.%20collections/README.md)
 
