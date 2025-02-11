@@ -24,5 +24,7 @@ You can find the folling topics:
 07. [handlers](07.%20handlers/README.md)
 08. [blocks](08.%20blocks/README.md)
 09. [error handling](09.%20error%20handling/README.md)
-10. [commands](10.%20conditional/README.md)
+10. [conditional](10.%20conditional/README.md)
+11. [commands](11.%20commands/README.md)
+12. [Modules](12.%20Modules/README.md)
 
