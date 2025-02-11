@@ -52,7 +52,7 @@ This structure helps in maintaining clean and modular code, making it easier to 
 # Create an role
 You can create an role with the following command
 ```bash
-ansible-galaxy init <rolename>
+ansible-galaxy role init <rolename>
 ```
 
 ## Naming convention
