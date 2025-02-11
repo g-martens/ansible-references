@@ -31,7 +31,7 @@ One of the simples condition that can be tested is wether a boolean is true or f
     when: run_my_task
 ```
 
-Below you can find some Examople Conditionals
+Below you can find some Example Conditionals
 
 Operation  | Example
 ------------- | -------------
@@ -47,7 +47,8 @@ Variable does not exists | min_memory is not defined
 Boolean variable is true | memory_available
 Boolean variable is false | not memory_available
 First variables value is present as a value in second variable list | ansible_facts['distribution'] insupported_distros
-
+String contains | "''RedHat' in ansible_facts['distribution']"
+String not contains | "''RedHat' not in ansible_facts['distribution']"
 # Testing Multiple Conditions
 One when statement can be used to evaluate multiple conditionals.To do so, conditinals can be combined with either the **and** or **or** keywords, and grouped with parantheses.
 
@@ -80,4 +81,5 @@ when: >
   or
   ( ansible_facts['distribution'] == "Fedora" and
   ansible_facts['distribution_major_version'] == "34" )
+
 ```
