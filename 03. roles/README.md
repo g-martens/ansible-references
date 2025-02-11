@@ -66,7 +66,7 @@ for example:
 g-martens.postgres
 ```
 
-# Defining Variables and Defaults
+## Defining Variables and Defaults
 Role variables are defined by creating a vars/main.yml file with key-value pairs in the role directory hierarchy. These variables are referenced in role task files like any other variable: {{ VAR_NAME }}. These variables have a high precedence and can not be overridden by inventory variables. These variables are used by the internal functioning of the role.
 
 Default variables enable you to set default values for variables that can be used in a play to configure the role or customize its behavior. These variables are defined by creating a defaults/main.yml file with key-value pairs in the role directory hierarchy. Default variables have the lowest precedence of any available variables.
@@ -166,3 +166,53 @@ In the preceding example, an ansible.builtin.debug task runs in each tasks secti
 - After all the pre_tasks tasks run
 - After all the roles tasks and tasks tasks run
 - After all the post_tasks run
+
+# Download roles from remote sources
+## ansible.cfg
+when you import roles, keep in mind what your default roles directory is.
+You can change this behavior in the ansible.cfg with the following item
+```ini
+[defaults]
+roles_path = ~/ansible/roles
+```
+
+## Installing Roles Using a Requirements File
+If you have a playbook that must have specific roles installed, then you can create a roles/requirements.yml file in the project directory that specifies which roles are needed. This file acts as a dependency manifest for the playbook project that enables playbooks to be developed and tested separately from any supporting roles.
+
+Then, before you run ansible-navigator run, you can use the ansible-galaxy role command to install those roles in your project's roles directory.
+### example role Galaxy
+```YAML
+# from Ansible Galaxy, using the latest version
+- src: geerlingguy.redis
+
+# from Ansible Galaxy, overriding the name and using a specific version
+- src: geerlingguy.redis
+  version: "1.5.0"
+  name: redis_prod
+```
+
+### example role from git
+```YAML
+- src: https://git.example.com/someuser/someuser.myrole
+  scm: git
+  version: "1.5.0"
+```
+
+### example role from tarball
+```YAML
+- src: file:///opt/local/roles/tarrole.tar
+  name: tarrole
+
+- src: https://www.example.com/role-archive/someuser.otherrole.tar
+  name: someuser.otherrole
+```
+
+To install the role, you can execute the following command
+```bash
+ansible-galaxy role install -r roles/requirements.yml -p ~/ansible/roles
+```
+
+>[!WARNING]
+>If you don't specify the -p, the roles_path from your ansible.cfg is being used.\
+
+You can find the community-managed roles on the [Ansible Galaxy](https://galaxy.ansible.com/)
