@@ -45,6 +45,7 @@ roles/
     tests/
       inventory
       test.yml
+    README.md
 ```
 This structure helps in maintaining clean and modular code, making it easier to manage complex configurations.
 
