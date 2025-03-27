@@ -73,16 +73,16 @@ ansible-config init | grep  "^[^#]" > /tmp/ansible-config.cfg
 
 
 
-# Ansible-navigator.cfg
+# Ansible-navigator.yml
 With this config file, you can manipulate how ansible works. you can create/edit this file in the following places:
 1. ANSIBLE_CONFIG (environment variable if set)
-2. ansible-navigator.cfg (in the current directory)
-3. ~/.ansible-navigator.cfg (in home directory)
-4. /etc/ansible/ansible-navigator.cfg
+2. ansible-navigator.yml (in the current directory)
+3. ~/.ansible-navigator.yml (in home directory)
+4. /etc/ansible/ansible-navigator.yml
 
 The precendence order is from top to bottom.
 
-## Example of an ansible.cfg file
+## Example of an ansible.yml file
 ```yaml
 ---
 ansible-navigator:
@@ -91,11 +91,16 @@ ansible-navigator:
       path: ~/.ansible.cfg
   execution-environment:
     image: utility.lab.example.com/ee-supported-rhel8:latest
-    pull: registry
+    pull:
       policy: missing
 
   playbook-artifact:
     enable: false
   mode: stdout
 ...
+```
+
+To generate an example config, you can execute the following command
+```bash
+ansible-navigator settings --gs > /where/to/save.yml
 ```
