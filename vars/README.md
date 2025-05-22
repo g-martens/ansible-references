@@ -74,11 +74,12 @@ remote_server1:
 >http: 80 is not clear
 >http_web_port_insecure: 80 is better
 
-# Using Variables in playbooks
+# Using Variables
 After you have declared variables, you can use the variables in tasks. Variables are referenced by placing the variable name in double braces ({{  }}). Ansible substitutes the variable with its value when a task is executed.
 
+## Simple Variables
 **Example:**
-```YANL
+```YAML
 ---
 - name: Variable examples
   host: all
@@ -119,7 +120,7 @@ You can define this file with vars_file:
         name: "{{ user }}"
 ```
 
-# Using Dictonariers as Variables
+## Using Dictonariers as Variables
 Instead of assigning configuration data that relates to the same element to multiple variables, Administrators can use dictonaries. A Dictonary is a data structure containing key-value pairs, where the values can also be dictonaries.
 
 For example, consider the following snippet:
@@ -143,7 +144,7 @@ users:
     last_name: Cook
     home_dir: /users/acook
 ```
-Now you can use the following variables to acces user data:
+Now you can use the following variables to access user data:
 
 ```YAML
 # Returns 'Bob'
@@ -153,7 +154,7 @@ user.bjones.first_name
 users.acook.home_dir
 ```
 
-Because the variable is defined as a pyhton dictonary, an alternative syntax is available.
+Because the variable is defined as a python dictonary, an alternative syntax is available.
 ```YAML
 # Returns 'Bob'
 users['bjones']['first_name']
@@ -165,6 +166,43 @@ users['acook']['home_dir']
 >The dot notation can cause problems if the key names are the same as names of Python methods or attributes, such as discard, copy, add, and so on.
 >Using the brackets notation can help avoid conflicts and errors.
 >Both syntaxes are valid, but to make troubleshooting easier, Red Hat recommends that you use one syntax consistently in all files throughout any given Ansible project.
+
+## Using List as Variables
+An list variable is defined as following:
+```YAML
+users:
+  - name: alice
+    description: developer
+  - name: bob
+    description: tester
+  - name: charlie
+    description: developer
+```
+For example, if you want to create the user when his/her description is developer, you can define this as following in your playbook:
+```YAML
+---
+- name: Create developer users
+  hosts: all
+  become: yes
+  vars:
+    users:
+      - name: alice
+        description: developer
+      - name: bob
+        description: tester
+      - name: charlie
+        description: developer
+
+  tasks:
+    - name: Add developer users
+      user:
+        name: "{{ item.name }}"
+        state: present
+      loop: "{{ users }}"
+      when: item.description == "developer"
+```
+
+
 
 # Capturing Command output with Registered Variables
 You can use the register statement of a task, to capture the output of a command, or  other information about the execution of an module. this output is saved into a variable that can be used later in the playbook for either debugging purposes or to archieve something else, such as aplying  a particular configuration setting based on a command's output.
