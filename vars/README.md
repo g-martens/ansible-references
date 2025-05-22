@@ -95,6 +95,12 @@ After you have declared variables, you can use the variables in tasks. Variables
         # This line will create the user named joe
         name: "{{ user }}"
 ```
+## Defaults
+you can use defaults, when you have an variable, which is not defined.
+If that is the case, than you an fill it with a default value. See below for an example:
+```yaml
+hosts: "{{ my_host | default('localhost') }}"
+```
 
 You can also choose to create an file where you will define the variables:
 an example of this file is: vars.yml:
@@ -222,3 +228,12 @@ You can use the register statement of a task, to capture the output of a command
     - debug:
         var: install_result
 ```
+
+
+
+
+
+# Magic Variables
+
+- {{ inventory_hostname }}
+- {{ group_names }}
