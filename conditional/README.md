@@ -11,6 +11,5 @@
                                                                                                                      
 ```
 
-01. [when](when.md)
-02. [changed_when](changed_when.md)
-03. [failed_when](failed_when.md)
+01. [When](when.md)
+02. [Error Handling](error_handling.md)
