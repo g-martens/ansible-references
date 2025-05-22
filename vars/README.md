@@ -11,9 +11,9 @@
 
 
 ```
-Ansible support variables that can be userd to store values that you can reuse througout files in an Ansible project. With variables you can create te plays/roles more dynamic, which improves reusability.
+Ansible support variables that can be used to store values that you can reuse throughout files in an Ansible project. With variables you can create te plays/roles more dynamic, which improves reusability.
 
-# Variables Precendence
+# Variables Precedence
 Ansible does apply variable precedence, and you might have a use for it. Here is the order of precedence from least to greatest (the last listed variables override all other variables):
 
 1. command line values (for example, -u my_user, these are not variables) 1
@@ -121,7 +121,7 @@ You can define this file with vars_file:
 ```
 
 ## Using Dictionaries as Variables
-Instead of assigning configuration data that relates to the same element to multiple variables, Administrators can use dictonaries. A Dictonary is a data structure containing key-value pairs, where the values can also be dictonaries.
+Instead of assigning configuration data that relates to the same element to multiple variables, Administrators can use dictionaries. A Dictionary is a data structure containing key-value pairs, where the values can also be dictionaries.
 
 For example, consider the following snippet:
 ```YAML
@@ -132,7 +132,7 @@ user2_first_name: Anne
 user2_last_name: Cook
 user2_home_dir: /users/acook
 ```
-This could be written as a dictonary called users
+This could be written as a dictionary called users
 ```YAML
 users:
   bjones:
@@ -154,7 +154,7 @@ user.bjones.first_name
 users.acook.home_dir
 ```
 
-Because the variable is defined as a python dictonary, an alternative syntax is available.
+Because the variable is defined as a python dictionary, an alternative syntax is available.
 ```YAML
 # Returns 'Bob'
 users['bjones']['first_name']
@@ -205,7 +205,7 @@ For example, if you want to create the user when his/her description is develope
 
 
 # Capturing Command output with Registered Variables
-You can use the register statement of a task, to capture the output of a command, or  other information about the execution of an module. this output is saved into a variable that can be used later in the playbook for either debugging purposes or to archieve something else, such as aplying  a particular configuration setting based on a command's output.
+You can use the register statement of a task, to capture the output of a command, or  other information about the execution of an module. this output is saved into a variable that can be used later in the playbook for either debugging purposes or to achieve something else, such as applying  a particular configuration setting based on a command's output.
 
 **Example:**
 ```YAML
