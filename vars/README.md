@@ -228,12 +228,3 @@ You can use the register statement of a task, to capture the output of a command
     - debug:
         var: install_result
 ```
-
-
-
-
-
-# Magic Variables
-
-- {{ inventory_hostname }}
-- {{ group_names }}
