@@ -69,8 +69,8 @@ Normaly any handlers are executed after finishing all task. But when you want to
 >
 >Setting force_handlers: true on a play does not cause handlers to be notified for tasks that report ok or failed; it only causes the handlers to run that have already been notified before the point at which the play failed.
 
-# Specifying Task Failure Conditions
-You can use the failed_when keyword on a task to specify which conditions indicate that thetask has failed. This is often used with command modules that might successfully execute a command, but where the command's output indicates a failure.
+# Specifying Task Failure Conditions (failed_when)
+You can use the failed_when keyword on a task to specify which conditions indicate that the task has failed. This is often used with command modules that might successfully execute a command, but where the command's output indicates a failure.
 
 For example, you can run a script that outputs an error message and then use that message to  define the failed state for the task. The following example shows one way that you can use the failed_when keyword in a task:
 ```YAML
@@ -96,7 +96,7 @@ tasks:
 You can use the ansible.builtin.fail module to provide a clear failure message for the task. This approach also enables delayed failure, which means that you can run intermediate tasks to complete or roll back other changes.
 
 
-# Specifying When a Task Reports "Changed" Results
+# Specifying When a Task Reports "Changed" Results (changed_when)
 When a task makes a change to a managed host, it reports the changed state and notifies handlers. When a task does not need to make a change, it reports ok and does not notify handlers.
 
 Use the changed_when keyword to control how a task reports that it has changed something on the managed host. For example, the ansible.builtin.command module in the next example validates the httpd configuration on a managed host.
