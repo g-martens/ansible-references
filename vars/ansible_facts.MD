@@ -28,7 +28,9 @@ You can use the ansible facts as following
 - ansible_facts.apparmor.status
 
 ## Example of ansible facts
-
+<details>
+<summary> Example of ansible Facts </summary>
+Below you can find an example of some ansible facts
 ```JSON
 localhost | SUCCESS => {
     "ansible_facts": {
@@ -1251,3 +1253,4 @@ localhost | SUCCESS => {
 }
 
 ```
+</details>

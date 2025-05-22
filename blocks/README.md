@@ -15,7 +15,7 @@
 In playbooks, blocks are clauses that logically group tasks, and can be used to control how tasks are executed. For example, a task block can have a when keyword to apply a conditional to multiple tasks:
 ```YAML
 - name: block example
-  hosts: all 
+  hosts: all
   tasks:
     - name: installing and configuring DNF versionlock plugin
       block:

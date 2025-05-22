@@ -82,7 +82,7 @@ ansible-galaxy collection install -r collections/requirements.yml -p collections
 ```
 
 # Configuring Ansible Content Collection Sources
-By default, the ansible-galaxy command uses Ansible Galaxy at https://galaxy.ansible.com/ to doownload Ansible Content Collections. Yu might not want to use this command, preferring automation hub or your own private automation hub. Alternatively, you might want to try automation hub first, and then try Ansible Galaxy.
+By default, the ansible-galaxy command uses Ansible Galaxy at https://galaxy.ansible.com/ to download Ansible Content Collections. Yu might not want to use this command, preferring automation hub or your own private automation hub. Alternatively, you might want to try automation hub first, and then try Ansible Galaxy.
 
 You can configure the sources that ansible-galaxy uses to get Ansible Content Collections in your Ansible project's ansible.cfg file. The relevant parts of that file might look like the following example:
 ```INI

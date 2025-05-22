@@ -20,7 +20,7 @@ Here are the main components of an Ansible role:
 2. **Handlers**: The main.yml file in this directory contains the role's handler definitions.
 3. **Files**: This directory contains static files that are referenced by role tasks.
 4. **Templates**: This directory contains Jinja2 templates that are referenced by role tasks.
-5. **Vars**: The main.yml file in this directory defines the role's variable values. Often these variables are used for internal purposes within the role. These variables have high precedence and are not intended to be changed when used in a playbook. (chould not modify)
+5. **Vars**: The main.yml file in this directory defines the role's variable values. Often these variables are used for internal purposes within the role. These variables have high precedence and are not intended to be changed when used in a playbook. (could not modify)
 6. **Defaults**: The main.yml file in this directory contains the default values of role variables that can be overwritten when the role is used. These variables have low precedence and are intended to be changed and customized in plays.
 7. **Meta**: The main.yml file in this directory contains information about the role, including author, license, platforms, and optional role dependencies.
 8. **Tests**: This directory can contain an inventory and test.yml playbook that can be used to test the role.

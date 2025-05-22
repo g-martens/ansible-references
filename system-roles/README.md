@@ -37,7 +37,7 @@ Now, these roles are installed in the following directory:
 /usr/share/ansible/roles
 ```
 
-You can also check this with ansible-galaxy 
+You can also check this with ansible-galaxy
 ```bash
 ansible-galaxy list
 ```

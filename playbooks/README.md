@@ -18,14 +18,14 @@ An playbook can exist of or more plays
 
 In each play you can set the following items
 1. **Name**: (Description of what this play does)
-2. **Hosts**: (again wich host, group, localhost, all do you want to run the play at)
+2. **Hosts**: (again which host, group, localhost, all do you want to run the play at)
 3. **become**: (Do you want to elevate the permissions (become an different user))
 4. **vars**: (which variable do you want to specify)
 5. **vars_files**: (Which var file do you want to use)
 6. **tasks**: ( which tasks do you want to execute)
 7. **Modules**: (a task exist of 1 or more modules)
 
-When you create an playbook, always start de first line with the tree dashes (---) to show the beginning of the document. You can use the three dots (...) to show of the file. 
+When you create an playbook, always start de first line with the tree dashes (---) to show the beginning of the document. You can use the three dots (...) to show of the file.
 
 **Example of an playbook**
 ```YAML

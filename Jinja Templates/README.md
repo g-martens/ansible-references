@@ -71,7 +71,7 @@ tasks:
 You can use Jinja2 control structures in template files to reduce repetitive typing, to enter entries for each host in a play dynamically, or conditionally insert text into a file.
 
 ## Comments
-In Jinja you can create comments with the folling:
+In Jinja you can create comments with the following:
 ```JINJA
 {# This is an example of a comment #}
 ```
@@ -183,7 +183,7 @@ network_data:
     mtu: 1500
     dns: 172.25.250.254
 ```
-What we want to do, is to take somne values, and place this in the /etc/hosts file.
+What we want to do, is to take some values, and place this in the /etc/hosts file.
 
 We can do this as follows:
 ```JINJA

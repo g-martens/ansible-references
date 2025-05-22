@@ -32,7 +32,7 @@ or for example to make store that httpd is stopped
 ```
 
 # Ansible-Playbook
-With this tool you can execute ansible-playbook against inventorys.
+With this tool you can execute ansible-playbook against inventory's.
 Below you can find an example:
 ```bash
 [user@server]$ ansible-playbook -i inventory/production site.yml --ask-vault-pass --tags install,configure
@@ -40,20 +40,20 @@ Below you can find an example:
 
 
 # Ansible-lint
-With this tool you can verify you code against the best practises of ansible.
+With this tool you can verify you code against the best practices of ansible.
 ```bash
 [user@server]$ ansible-lint site.yml
 ```
 
 # Ansible-galaxy
-With ansible-galaxy you can do a lot of stuff. Below you can find te most usefull examples
+With ansible-galaxy you can do a lot of stuff. Below you can find te most useful examples
 
 ## Generate a role
 ```bash
 [user@server]$ ansible-galaxy init <rolname>
 ```
 
-## Install items from requirments.yml
+## Install items from requirements.yml
 ```bash
 [user@server]$ ansible-galaxy install -r roles/requirements.yml
 ```

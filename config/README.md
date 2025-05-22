@@ -12,7 +12,7 @@
 
 ```
 
-You can create and edit two files in each of your ansible project directorys that configures the behavour of ansible and the ansible-navigator command. an ansible project directory is directory from which you runs your playbooks by using the ansible, ansible-playbook and ansible-navigator commands.
+You can create and edit two files in each of your ansible project directory's that configures the behavior of ansible and the ansible-navigator command. an ansible project directory is directory from which you runs your playbooks by using the ansible, ansible-playbook and ansible-navigator commands.
 
 The file you can create or edit are:
 
@@ -28,7 +28,7 @@ With this config file, you can manipulate how ansible works. you can create/edit
 3. ~/.ansible.cfg (in home directory)
 4. /etc/ansible/ansible.cfg
 
-The precendence order is from top to bottom.
+The precedence order is from top to bottom.
 
 ## Example of an ansible.cfg file
 
@@ -41,7 +41,7 @@ log_path = ~/ansible-playbook.log
 roles_path = ~/ansible/roles
 collections_path= ~/ansible/collections
 
-[privilege_escelation]
+[privilege_escalation]
 become = true
 become_method = sudo
 become_user = root
@@ -58,7 +58,7 @@ become_ask_pass = false
 
 
 ## Tips to create an config file
-U can use the folling command to dump all the config settings that are available.
+U can use the following command to dump all the config settings that are available.
 
 ```bash
 ansible-config list
@@ -80,7 +80,7 @@ With this config file, you can manipulate how ansible works. you can create/edit
 3. ~/.ansible-navigator.yml (in home directory)
 4. /etc/ansible/ansible-navigator.yml
 
-The precendence order is from top to bottom.
+The precedence order is from top to bottom.
 
 ## Example of an ansible.yml file
 ```yaml

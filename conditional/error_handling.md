@@ -12,7 +12,7 @@
 
 
 ```
-With error handling you can control the behavour of ansible when a tasks fails, and what the conditions are for a task to fail.
+With error handling you can control the behavior of ansible when a tasks fails, and what the conditions are for a task to fail.
 For this you can use the following keywords:
 1. ignore_errors
 2. force_handlers
@@ -20,8 +20,8 @@ For this you can use the following keywords:
 4. changed_when
 
 
-# Igonore Errors
-By default, if a tasks fails, the play is aborted. However this behavour can be overridden by ignoring failed_tasks. You can use the ignore_errors keyword in a task to accomplish this.
+# Ignore Errors
+By default, if a tasks fails, the play is aborted. However this behavior can be overridden by ignoring failed_tasks. You can use the ignore_errors keyword in a task to accomplish this.
 ```YAML
 - name: Latest version of notapkg is installed
   ansible.builtin.dnf:
@@ -31,7 +31,7 @@ By default, if a tasks fails, the play is aborted. However this behavour can be 
 ```
 
 # Force Handlers
-Normaly when a task fails and the play aborts on that host, any handlers that had ben notified by earlier tasks in the play wont run. if you set the force_handlers: true keyword on the play, than notified handlers are called even if the play aborted because a later task failed.
+Normally when a task fails and the play aborts on that host, any handlers that had ben notified by earlier tasks in the play wont run. if you set the force_handlers: true keyword on the play, than notified handlers are called even if the play aborted because a later task failed.
 See the following snippet for an example:
 ```YAML
 ---
@@ -59,7 +59,7 @@ Normaly any handlers are executed after finishing all task. But when you want to
 
 ```YAML
 - name: Force any notified handlers to execute now
-  ansible.buildin.meta: flush_handlers
+  ansible.builtin.meta: flush_handlers
 ```
 
 >[!WARNING]

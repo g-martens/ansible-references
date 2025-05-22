@@ -84,7 +84,7 @@ Decrypting strings is more difficult than files. For this you can use the debug 
 ansible localhost -m debug -a var='this_is_encrypted' -e "@mixed_vars.yml" --ask-vault-pass
 
 # Output:
-Vault password: 
+Vault password:
 localhost | SUCCESS => {
     "this_is_encrypted": "this is an encrypted string"
 }
