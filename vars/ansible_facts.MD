@@ -28,11 +28,13 @@ You can use the ansible facts as following
 - ansible_facts.apparmor.status
 
 ## Example of ansible facts
+
 <details>
-<summary> Example of ansible Facts </summary>
-Below you can find an example of some ansible facts
+
+<summary>Example of ansible Facts</summary>
+
 ```JSON
-localhost | SUCCESS => {
+   localhost | SUCCESS => {
     "ansible_facts": {
         "ansible_all_ipv4_addresses": [
             "10.11.0.2",
@@ -1251,6 +1253,5 @@ localhost | SUCCESS => {
     },
     "changed": false
 }
-
 ```
 </details>
