@@ -1,16 +1,4 @@
-```
-
- __ __   ____  ____    _____
-|  |  | /    ||    \  / ___/
-|  |  ||  o  ||  D  )(   \_ 
-|  |  ||     ||    /  \__  |
-|  :  ||  _  ||    \  /  \ |
- \   / |  |  ||  .  \ \    |
-  \_/  |__|__||__|\_|  \___|
-                            
-
-
-```
+# Variables
 Ansible support variables that can be used to store values that you can reuse throughout files in an Ansible project. With variables you can create te plays/roles more dynamic, which improves reusability.
 
 # Variables Precedence
