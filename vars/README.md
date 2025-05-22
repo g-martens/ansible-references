@@ -120,7 +120,7 @@ You can define this file with vars_file:
         name: "{{ user }}"
 ```
 
-## Using Dictonariers as Variables
+## Using Dictonaries as Variables
 Instead of assigning configuration data that relates to the same element to multiple variables, Administrators can use dictonaries. A Dictonary is a data structure containing key-value pairs, where the values can also be dictonaries.
 
 For example, consider the following snippet:
